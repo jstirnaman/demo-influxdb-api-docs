@@ -1,9 +1,12 @@
 
-# Generate influxdata/openapi contracts
+## Setup API contracts
 
 This project contains a Git submodule for the *influxdata/openapi* repository.
-The InfluxData API contracts are located at *./openapi/contracts*.
-This project uses the `ref` contracts located at *./openapi/contracts/ref*.
+This project uses the InfluxData API `ref` contracts located at *./openapi/contracts/ref*.
+To make changes to *openapi* files, edit the OpenAPI definitions in *./openapi/src* and then
+regenerate the contracts.
+
+### Generate influxdata/openapi contracts
 
 To regenerate the contracts after changing `src` files, do the following:
 
@@ -16,12 +19,21 @@ To regenerate the contracts after changing `src` files, do the following:
 2. In your terminal, enter `make generate-all` to build the InfluxDB *openapi* contracts.
 3. *Optional*. Use `git add` to stage your `src` *and* `contract` changes, and then use `git commit` to commit them to your branch.
 
-# Install Golang
+## Setup the documentation web site
+
+This project borrows from the [Docsy Example app]() and uses the [Docsy theme module for Hugo]().
+
+Follow these steps to build the site:
+
+- [Install Golang](#install-golang)
+- [Install NodeJS, Hugo Extended, and dependencies](#install-nodejs-hugo-extended-and-dependencies)
+
+### Install Golang
 
 This project uses Hugo Extended to create a web site for managing and publishing documentation.
 Hugo Extended requires Golang. If you haven't already, follow the instructions to install Golang for your system.
 
-# Install NodeJS, Hugo Extended, and dependencies
+### Install NodeJS, Hugo Extended, and dependencies
 
 This project uses `npm`, the NodeJS package manager, to manage Hugo Extended and SCSS packages as *dev dependencies*. `npm` is provided when you install NodeJS.
 
@@ -56,3 +68,20 @@ In your terminal, do the following:
    ```
 
 In your browser, visit <http://localhost:1313> to view your site.
+
+## Troubleshoot the documentation web site
+
+### Error: Hugo failed to extract a shortcode
+
+If the Hugo server reports the following error:
+
+```sh
+Error: Error building site:... failed to extract shortcode: template for shortcode "blocks/cover" not found
+```
+
+Delete the Hugo cache on your system, and then restart Hugo--for example, enter the following commands:
+
+```sh
+sudo rm -rf $TMPDIR/hugo_cache/
+npx hugo server  
+```
