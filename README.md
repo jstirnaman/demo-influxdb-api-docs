@@ -1,3 +1,9 @@
+## What is this?
+
+A sample site using Hugo for API documentation.
+Send the Docs is where I experiment with Docs-as-code to build developer-friendly documentation.
+
+[Learn more about this project](#more-about-this-project).
 
 ## Setup API contracts
 
@@ -85,3 +91,58 @@ Delete the Hugo cache on your system, and then restart Hugo--for example, enter 
 sudo rm -rf $TMPDIR/hugo_cache/
 npx hugo server  
 ```
+
+## More about this project
+
+### Goals
+
+<ol>
+   <li>Practice coding, managing content with Hugo, automating content pipelines, and deploying.</li>
+   <li>Practice technical writing.</li>
+   <li>
+   Use OSS and automation to generate templated Markdown documents from an API specification.
+   </li>
+   <li>Develop Markdown templates that structure API endpoint documentation in a user-friendly format.</li>
+   <li>Transform the generated Markdown to populate the template(s).</li>
+   <li>
+   Use Hugo, the popular static site generator, and open-source themes to render the templated documentation.
+   </li>
+   <li>
+   Enhance the documentation with the following features: code samples, "try-it", theme parameters.
+   </li>
+</ol>
+
+### About the author
+
+I'm a technical writer, documentation engineer, developer, and librarian.
+I fell in love with metadata (for biodiversity sampling) and the Web in the late 1990's.
+After earning my Master's in Library and Information Science, I worked as a reference librarian and managed digital library collections, content repositories, and web sites.
+
+Out of a hunger to solve problems, a desire to automate tedious tasks, and a passion for information sharing, I continued learning agile, programming, and DevOps.
+I've used React, TypeScript, and API integrations to build a lead discovery platform. 
+I've worked on content management and search with Solr, Drupal, Ruby on Rails, PostgreSQL, and XSLT.
+I've worked with a large team on a legacy payments processing system using "plain ol'" JavaScript, jQuery, Java, and Oracle.
+
+I was fortunate to pair with some great developers who taught me the value and practice
+of automated tests.
+I learned CI/CD and how to automate processes I'd never considered.
+
+When I considered leaving the public sector for the for-profit world, I feared that I didn't have
+what it took to be a frontend engineer in a fast-paced, corporate world.
+As it turned out, some aspects weren't as fast-paced as I would've liked.
+For everything else, our team relied on each other and figured it out together.
+Working as an engineer and technical lead, I found that my technical skills were sufficient, 
+but my superpower was more about helping other developers be successful.
+I was reminded of what I enjoy most:
+
+- Helping people learn.
+- Sharing information.
+- Writing and editing.
+- Applying automation to improve quality and to free people up for more creative work.
+
+At InfluxData, I found a great team and the perfect mix of writing, automating, hacking on APIs, and helping developers.
+So, I took the leap into technical writing and they took a risk on me.
+Since then I've also volunteered as a technical writer with the Ethereum Foundation, writing guides for the Semaphore protocol and smart contracts.
+
+When I'm not working on docs and code, I'm playing with my family, cooking, cycling, and enjoying music.
+Don't be surprised if some of those themes trickle in here.
