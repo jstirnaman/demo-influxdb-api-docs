@@ -1,6 +1,6 @@
-[submodule "openapi"]
-	path = openapi
+[submodule "influxdata-openapi"]
+	path = influxdata-openapi
 	url = git@github.com:influxdata/openapi.git
 [submodule "docs-site"]
     path = docs-site
-	url = git@github.com:google/docsy-example.git
+	url = git@github.com:jstirnaman/docs-site.git
