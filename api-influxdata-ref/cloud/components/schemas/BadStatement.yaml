@@ -1,0 +1,10 @@
+description: >-
+  A placeholder for statements for which no correct statement nodes can be
+  created
+properties:
+  text:
+    description: Raw source text
+    type: string
+  type:
+    $ref: ./NodeType.yaml
+type: object

@@ -1,0 +1,12 @@
+description: Represents a function call
+properties:
+  arguments:
+    description: Function arguments
+    items:
+      $ref: ./Expression.yaml
+    type: array
+  callee:
+    $ref: ./Expression.yaml
+  type:
+    $ref: ./NodeType.yaml
+type: object

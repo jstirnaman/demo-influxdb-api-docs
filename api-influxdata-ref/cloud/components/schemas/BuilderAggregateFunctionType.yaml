@@ -1,0 +1,4 @@
+enum:
+  - filter
+  - group
+type: string

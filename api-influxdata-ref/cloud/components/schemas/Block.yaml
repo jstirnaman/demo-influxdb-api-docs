@@ -1,0 +1,10 @@
+description: A set of statements
+properties:
+  body:
+    description: Block body
+    items:
+      $ref: ./Statement.yaml
+    type: array
+  type:
+    $ref: ./NodeType.yaml
+type: object

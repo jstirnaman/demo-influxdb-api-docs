@@ -1,0 +1,94 @@
+allOf:
+  - $ref: ./AuthorizationUpdateRequest.yaml
+  - properties:
+      createdAt:
+        format: date-time
+        readOnly: true
+        type: string
+      id:
+        description: The authorization ID.
+        readOnly: true
+        type: string
+      links:
+        example:
+          self: /api/v2/authorizations/1
+          user: /api/v2/users/12
+        properties:
+          self:
+            $ref: ./Link.yaml
+            readOnly: true
+          user:
+            $ref: ./Link.yaml
+            readOnly: true
+        readOnly: true
+        type: object
+      org:
+        description: >
+          The organization name.
+
+          Specifies the [organization]({{% INFLUXDB_DOCS_URL
+          %}}/reference/glossary/#organization)
+
+          that the token is scoped to.
+        readOnly: true
+        type: string
+      orgID:
+        description: >
+          The organization ID.
+
+          Specifies the [organization]({{% INFLUXDB_DOCS_URL
+          %}}/reference/glossary/#organization) that the authorization is scoped
+          to.
+        type: string
+      permissions:
+        description: |
+          The list of permissions.
+          An authorization must have at least one permission.
+        items:
+          $ref: ./Permission.yaml
+        minItems: 1
+        type: array
+      token:
+        description: >
+          The API token.
+
+          The token value is unique to the authorization.
+
+          [API tokens]({{% INFLUXDB_DOCS_URL %}}/reference/glossary/#token) are
+
+          used to authenticate and authorize InfluxDB API requests and `influx`
+
+          CLI commands--after receiving the request, InfluxDB checks that the
+
+          token is valid and that the `permissions` allow the requested
+          action(s).
+        readOnly: true
+        type: string
+      updatedAt:
+        format: date-time
+        readOnly: true
+        type: string
+      user:
+        description: >
+          The user name.
+
+          Specifies the [user]({{% INFLUXDB_DOCS_URL
+          %}}/reference/glossary/#user) that owns the authorization.
+
+          If the authorization is _scoped_ to a user, the user;
+
+          otherwise, the creator of the authorization.
+        readOnly: true
+        type: string
+      userID:
+        description: >-
+          The user ID. Specifies the [user]({{% INFLUXDB_DOCS_URL
+          %}}/reference/glossary/#user) that owns the authorization. If
+          _scoped_, the user that the authorization is scoped to; otherwise, the
+          creator of the authorization.
+        readOnly: true
+        type: string
+    type: object
+required:
+  - orgID
+  - permissions

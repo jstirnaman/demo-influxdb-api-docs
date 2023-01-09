@@ -1,0 +1,11 @@
+description: uses binary operators to act on two operands in an expression
+properties:
+  left:
+    $ref: ./Expression.yaml
+  operator:
+    type: string
+  right:
+    $ref: ./Expression.yaml
+  type:
+    $ref: ./NodeType.yaml
+type: object

@@ -1,0 +1,7 @@
+description: Declares a builtin identifier and its type
+properties:
+  id:
+    $ref: ./Identifier.yaml
+  type:
+    $ref: ./NodeType.yaml
+type: object

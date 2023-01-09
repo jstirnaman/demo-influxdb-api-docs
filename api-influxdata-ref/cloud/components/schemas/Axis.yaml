@@ -1,0 +1,30 @@
+description: Axis used in a visualization.
+properties:
+  base:
+    description: Radix for formatting axis values.
+    enum:
+      - ''
+      - '2'
+      - '10'
+    type: string
+  bounds:
+    description: >-
+      The extents of the axis in the form [lower, upper]. Clients determine
+      whether bounds are inclusive or exclusive of their limits.
+    items:
+      type: string
+    maxItems: 2
+    minItems: 0
+    type: array
+  label:
+    description: Description of the axis.
+    type: string
+  prefix:
+    description: Label prefix for formatting axis values.
+    type: string
+  scale:
+    $ref: ./AxisScale.yaml
+  suffix:
+    description: Label suffix for formatting axis values.
+    type: string
+type: object

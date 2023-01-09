@@ -1,0 +1,26 @@
+properties:
+  h:
+    format: int32
+    type: integer
+  id:
+    type: string
+  links:
+    properties:
+      self:
+        type: string
+      view:
+        type: string
+    type: object
+  viewID:
+    description: The reference to a view from the views API.
+    type: string
+  w:
+    format: int32
+    type: integer
+  x:
+    format: int32
+    type: integer
+  'y':
+    format: int32
+    type: integer
+type: object

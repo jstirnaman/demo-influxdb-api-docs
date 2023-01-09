@@ -1,0 +1,9 @@
+properties:
+  authorizations:
+    items:
+      $ref: ./Authorization.yaml
+    type: array
+  links:
+    $ref: ./Links.yaml
+    readOnly: true
+type: object

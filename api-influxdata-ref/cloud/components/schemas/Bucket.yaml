@@ -1,0 +1,66 @@
+properties:
+  createdAt:
+    format: date-time
+    readOnly: true
+    type: string
+  description:
+    type: string
+  id:
+    readOnly: true
+    type: string
+  labels:
+    $ref: ./Labels.yaml
+  links:
+    example:
+      labels: /api/v2/buckets/1/labels
+      members: /api/v2/buckets/1/members
+      org: /api/v2/orgs/2
+      owners: /api/v2/buckets/1/owners
+      self: /api/v2/buckets/1
+      write: /api/v2/write?org=2&bucket=1
+    properties:
+      labels:
+        $ref: ./Link.yaml
+        description: The URL to retrieve labels for this bucket.
+      members:
+        $ref: ./Link.yaml
+        description: The URL to retrieve members that can read this bucket.
+      org:
+        $ref: ./Link.yaml
+        description: The URL to retrieve parent organization for this bucket.
+      owners:
+        $ref: ./Link.yaml
+        description: The URL to retrieve owners that can read and write to this bucket.
+      self:
+        $ref: ./Link.yaml
+        description: The URL for this bucket.
+      write:
+        $ref: ./Link.yaml
+        description: The URL to write line protocol to this bucket.
+    readOnly: true
+    type: object
+  name:
+    type: string
+  orgID:
+    type: string
+  retentionRules:
+    $ref: ./RetentionRules.yaml
+  rp:
+    type: string
+  schemaType:
+    $ref: ./SchemaType.yaml
+    default: implicit
+  type:
+    default: user
+    enum:
+      - user
+      - system
+    readOnly: true
+    type: string
+  updatedAt:
+    format: date-time
+    readOnly: true
+    type: string
+required:
+  - name
+  - retentionRules

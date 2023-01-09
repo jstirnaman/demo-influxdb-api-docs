@@ -1,0 +1,10 @@
+description: The viewport for a View's visualizations
+properties:
+  x:
+    $ref: ./Axis.yaml
+  'y':
+    $ref: ./Axis.yaml
+required:
+  - x
+  - 'y'
+type: object
