@@ -1,9 +1,0 @@
-allOf:
-  - $ref: ./Cell.yaml
-  - properties:
-      name:
-        type: string
-      properties:
-        $ref: ./ViewProperties.yaml
-    type: object
-type: object

@@ -1,6 +1,10 @@
 [submodule "influxdata-openapi"]
 	path = influxdata-openapi
-	url = git@github.com:influxdata/openapi.git
+	url = git@github.com:jstirnaman/influxdata-openapi.git
+    branch = jstirnaman-fixes
 [submodule "docs-site"]
     path = docs-site
 	url = git@github.com:jstirnaman/docs-site.git
+[submodule "hugo-data-to-pages"]
+	path = hugo-data-to-pages
+	url = git@github.com:kidsil/hugo-data-to-pages.git

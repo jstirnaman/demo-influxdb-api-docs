@@ -1,3 +1,0 @@
-items:
-  $ref: ./CellWithViewProperties.yaml
-type: array

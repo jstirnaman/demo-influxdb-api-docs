@@ -1,7 +1,0 @@
-description: Represents boolean values
-properties:
-  type:
-    $ref: ./NodeType.yaml
-  value:
-    type: boolean
-type: object

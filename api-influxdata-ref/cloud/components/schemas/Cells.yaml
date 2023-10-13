@@ -1,3 +1,0 @@
-items:
-  $ref: ./Cell.yaml
-type: array

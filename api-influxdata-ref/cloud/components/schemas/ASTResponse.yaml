@@ -1,5 +1,0 @@
-description: Contains the AST for the supplied Flux query
-properties:
-  ast:
-    $ref: ./Package.yaml
-type: object
